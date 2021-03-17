@@ -25,9 +25,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [DashBoardController::class, 'index'])
+        ->middleware(['auth'])
+        ->name('dashboard');
 
 Route::get('/dashboard', [DashBoardController::class, 'index'])
         ->middleware(['auth'])
