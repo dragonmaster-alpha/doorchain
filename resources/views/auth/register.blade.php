@@ -36,12 +36,12 @@
                                             <input id="password_confirmation" name="password_confirmation" type="password" class="form-control" value="">
                                             </div>
                                         </div>
-                                        <div> <label class="mb-1"><strong>User Role</strong></label></div>
-                                        <div class="form-group row">
+                                        <div style="display: none"> <label class="mb-1"><strong>User Role</strong></label></div>
+                                        <div class="form-group row" style="display: none">
                                             <div class="col">
                                                 <select class="mr-sm-2" name="user_role" id="user_role">
-                                                    <option selected>Choose...</option>
-                                                    <option value="2">Owner</option>
+                                                    <option>Choose...</option>
+                                                    <option selected value="2">Owner</option>
                                                     <option value="3">User</option>
                                                 </select>
                                             </div>

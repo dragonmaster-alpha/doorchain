@@ -18,7 +18,7 @@
 										<span class="text-black">Hello, <strong>{{ Auth::user()->fname }} {{ Auth::user()->lname }}</strong></span>
 										<p class="fs-12 mb-0">{{ $role->type }}</p>
 									</div>
-                                    <img src="images/profile/pic1.jpg" width="20" alt=""/>
+                                    <img src="../images/profile/pic1.jpg" width="20" alt=""/>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
                                     <a href="{{ route('profile.view') }}" class="dropdown-item ai-icon">

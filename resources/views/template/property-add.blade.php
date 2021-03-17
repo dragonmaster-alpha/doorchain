@@ -34,10 +34,17 @@
                                             @endforeach
                                         </select>
                                     </div>
+                                    @if($role->type == "Administrator")
                                     <div class="form-group col-md-6">
                                         <label>Parcel Number</label>
                                         <input type="text" class="form-control" placeholder="" name="parcel_number" required>
                                     </div>
+                                    @else
+                                    <div class="form-group col-md-6">
+                                        <label>Parcel Number</label>
+                                        <input type="text" readonly class="form-control" placeholder="" name="parcel_number" required value={{"qvw-102-bef-xcv-".rand(0,999)}}>
+                                    </div>
+                                    @endif
                                 </div>
 
                                 <div class="form-row">
@@ -71,6 +78,7 @@
                                     </div>
                                 </div>
 
+                                @if($role->type == "Administrator")
                                 <div class="form-row">
                                     <div class="form-group col-md-3">
                                         <label>Area Lot SF</label>
@@ -104,7 +112,7 @@
                                         <input type="number" class="form-control" name="year_built" required>
                                     </div>
                                 </div>
-
+                                @endif
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label>Relevant Resources</label>

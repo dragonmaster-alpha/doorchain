@@ -38,7 +38,10 @@ class ListController extends Controller
         else {
             $lists = Lists::all();
             foreach ($lists as $list) {
-                $list->is_subscribed = UserListMap::where('list_id', '=', $list->id)->first() ? true : false;
+                $list->is_subscribed = UserListMap::where([
+                    ['user_id', '=', $request->user()->id],
+                    ['list_id', '=', $list->id]
+                ])->first() ? true : false;
             }
 
             return view(
